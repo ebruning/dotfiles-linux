@@ -105,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=nvim
+alias cat=bat
+alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
@@ -112,3 +114,5 @@ source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+PYTHONPATH="/home/ethan/.pyenv/versions/3.8.6/lib/python3.8/site-packages"
