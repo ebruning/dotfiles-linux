@@ -1,3 +1,7 @@
 [user]
 	name = Ethan Bruning
 	email = ethan@bruning.io
+
+[core]
+	excludesfile = /Users/ethan/.gitignore_global
+	editor = nvim
