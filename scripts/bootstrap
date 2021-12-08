@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+PROJECT="$HOME/projects/dotfiles-linux/"
+
+# install ohmyzsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# system config files
+
+ln -sf $PROJECT/zshrc $HOME/.zshrc
+ln -sf $PROJECT/gitconfig $HOME/.gitconfig
+
+#nvim
+mkdir -p $HOME/.config/nvim
+
+ln -sf $PROJECT/nvim/init.vim $HOME/.config/nvim/init.vim
+ln -sf $PROJECT/nvim/coc-settings.json $HOME/.config/nvim/coc-settings.json
+
+#bashtop
+#ln -sf $PROJECT/
+
+#alacritty
+ln -sf $PROJECT/alacritty $HOME/.config/alacritty
+
+# BAT
+mkdir -p $HOME/.config/bat
+ln -sf $PROJECT/bat/config $HOME/.config/bat/config
