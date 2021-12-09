@@ -25,6 +25,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi=nvim
 alias cat=bat
+alias f=ranger
 alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
 
 export PYENV_ROOT="$HOME/.pyenv"
