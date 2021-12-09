@@ -70,43 +70,42 @@ set noshowmode  " Don't show mode since using status line
 set hidden
 set cmdheight=1
 
-" Commenter
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
-
 " Nerd Tree
-nmap <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeGitStatusWithFlags = 1
-    "\ "Staged"    : "#0ee375",  
-    "\ "Modified"  : "#d9bf91",  
-    "\ "Renamed"   : "#51C9FC",  
-    "\ "Untracked" : "#FCE77C",  
-    "\ "Unmerged"  : "#FC51E6",  
-    "\ "Dirty"     : "#FFBD61",  
-    "\ "Clean"     : "#87939A",  
-    "\ "Ignored"   : "#808080"  
-    "\ }                        
+"nmap <C-n> :NERDTreeToggle<CR>
+"let g:NERDTreeGitStatusWithFlags = 1
+"    "\ "Staged"    : "#0ee375",  
+"    "\ "Modified"  : "#d9bf91",  
+"    "\ "Renamed"   : "#51C9FC",  
+"    "\ "Untracked" : "#FCE77C",  
+"    "\ "Unmerged"  : "#FC51E6",  
+"    "\ "Dirty"     : "#FFBD61",  
+"    "\ "Clean"     : "#87939A",  
+"    "\ "Ignored"   : "#808080"  
+"    "\ }                        
 
-let g:NERDTreeIgnore = ['^node_modules$']
+"let g:NERDTreeIgnore = ['^node_modules$']
 
 " CTRL-P
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " auto folds
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  \ 'coc-html', 
-  \ 'coc-css', 
-  \ 'coc-prettier', 
-  \ 'coc-json', 
-  \ 'coc-emoji',
-  \ ]
+"let g:coc_global_extensions = [
+"  \ 'coc-snippets',
+"  \ 'coc-pairs',
+"  \ 'coc-tsserver',
+"  \ 'coc-eslint', 
+"  \ 'coc-html', 
+"  \ 'coc-css', 
+"  \ 'coc-prettier', 
+"  \ 'coc-json', 
+"  \ 'coc-emoji',
+"  \ ]
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+"inoremap <silent><expr> <c-space> coc#refresh()
+
+" ctrl-space search
+nnoremap <c-space> :FZF<CR>
 
 " Lightline
 let g:lightline = {
