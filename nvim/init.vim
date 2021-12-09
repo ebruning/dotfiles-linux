@@ -9,18 +9,16 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Appearence {{{ "
 Plug 'itchyny/lightline.vim'		" Status line
-Plug 'connorholyday/vim-snazzy'
-Plug 'dylanaraps/wal.vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'doums/darcula'
-Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'morhetz/gruvbox'
 
+" Search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 " Side bars{{{
-Plug 'scrooloose/nerdtree'		" NERD Tree
-Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
-Plug 'mbbill/undotree'
-Plug 'preservim/tagbar'
+"Plug 'scrooloose/nerdtree'		" NERD Tree
+"Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
+"Plug 'mbbill/undotree'
+"Plug 'preservim/tagbar'
 " }}}
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Completion as in vscode
 
@@ -34,7 +32,7 @@ Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescri
 Plug 'honza/vim-snippets'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'albanm/vuetify-vim'
 "}}}
 
