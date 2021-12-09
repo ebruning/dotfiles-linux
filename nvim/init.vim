@@ -32,8 +32,6 @@ Plug 'dense-analysis/ale' "ES-Lint
 Plug 'pangloss/vim-javascript'
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescript'],  'do': 'make install' }
 Plug 'honza/vim-snippets'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'SirVer/ultisnips'
@@ -72,7 +70,7 @@ set splitright
 set splitbelow
 set noshowmode  " Don't show mode since using status line
 set hidden
-set cmdheight=2
+set cmdheight=1
 
 " Commenter
 vmap ++ <plug>NERDCommenterToggle
@@ -114,7 +112,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
 " coc config
