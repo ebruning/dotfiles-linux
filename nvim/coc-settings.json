@@ -1,5 +1,13 @@
 {
   "suggest.noselect": false,
+  "suggest.enablePreview": true,
+  "suggest.removeDuplicateItems": true,
+  "codeLens.enable": true,
+  "coc.preferences.jumpCommand": "drop",
+  "coc.preferences.rootPatterns": [
+    ".git",
+    ".vscode"
+  ],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
@@ -7,6 +15,15 @@
     "json",
     "javascriptreact",
     "typescript.tsx",
-    "graphql"
-  ]
+    "python"
+  ],
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "diagnostic.virtualText": false,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "javascript.referencesCodeLens.enable": false,
+  "javascript.implementationsCodeLens.enable": false,
+  "typescript.referencesCodeLens.enable": false,
+  "typescript.implementationsCodeLens.enable": false
 }
