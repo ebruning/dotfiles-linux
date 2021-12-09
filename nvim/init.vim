@@ -11,22 +11,18 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'itchyny/lightline.vim'		" Status line
 Plug 'connorholyday/vim-snazzy'
 Plug 'dylanaraps/wal.vim'
-Plug 'mhinz/vim-startify'
 Plug 'cocopon/iceberg.vim'
 Plug 'doums/darcula'
 Plug 'dracula/vim', { 'name': 'dracula' }
+Plug 'morhetz/gruvbox'
 
 " Side bars{{{
 Plug 'scrooloose/nerdtree'		" NERD Tree
 Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
 Plug 'mbbill/undotree'
-Plug  'preservim/tagbar'
+Plug 'preservim/tagbar'
 " }}}
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Completion as in vscode
-Plug 'junegunn/goyo.vim' " start menu
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-"Plug 'sheerun/vim-polyglot' "all lang packs :)
-
 
 "JS {{{
 Plug 'https://github.com/pangloss/vim-javascript.git'
@@ -44,11 +40,11 @@ Plug 'SirVer/ultisnips'
 Plug 'albanm/vuetify-vim'
 "}}}
 
-"}}}
 " Markdown {{{
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 "}}}
+
 " GIT {{{
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -62,11 +58,7 @@ Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " vim settinga
-colorscheme dracula
-
-if !has('gui_running')
-  set t_Co=256
-endif
+colorscheme gruvbox
 
 set encoding=utf-8
 set number
@@ -82,11 +74,6 @@ set noshowmode  " Don't show mode since using status line
 set hidden
 set cmdheight=2
 
-" MacVim specific settings
-if has("gui_macvim")
-  set guifont=Hack\ Nerd\ Font:h14
-endif
-
 " Commenter
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
@@ -94,9 +81,6 @@ nmap ++ <plug>NERDCommenterToggle
 " Nerd Tree
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeGitStatusWithFlags = 1
-"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-"let g:NERDTreeGitStatusNodeColorization = 1
-"let g:NERDTreeColorMapCustom = {
     "\ "Staged"    : "#0ee375",  
     "\ "Modified"  : "#d9bf91",  
     "\ "Renamed"   : "#51C9FC",  
@@ -111,16 +95,6 @@ let g:NERDTreeIgnore = ['^node_modules$']
 
 " CTRL-P
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" coc config
-"let g:coc_global_extensions = [
-"  \ 'coc-snippets',
-"  \ 'coc-pairs',
-"  \ 'coc-tsserver',
-"  \ 'coc-eslint',
-"  \ 'coc-prettier',
-"  \ 'coc-json',
-"  \ ]
 
 " auto folds
 let g:coc_global_extensions = [
@@ -142,14 +116,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ }
-
-"let g:coc_node_path ='/Users/ethan/.nvm/versions/node/v10.16.0/bin/node'
-
-" Gitgutter config for darkula
-" hi! link GitGutterAdd GitAddStripe
-" hi! link GitGutterChange GitChangeStripe
-" hi! link GitGutterDelete GitDeleteStripe
-" let g:gitgutter_sign_removed = '▶'
 
 " coc config
 " ======
