@@ -16,8 +16,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Side bars{{{
-"Plug 'scrooloose/nerdtree'		" NERD Tree
-"Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
+Plug 'scrooloose/nerdtree'		" NERD Tree
+Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
 "Plug 'mbbill/undotree'
 "Plug 'preservim/tagbar'
 " }}}
@@ -72,19 +72,19 @@ set hidden
 set cmdheight=1
 
 " Nerd Tree
-"nmap <C-n> :NERDTreeToggle<CR>
-"let g:NERDTreeGitStatusWithFlags = 1
-"    "\ "Staged"    : "#0ee375",  
-"    "\ "Modified"  : "#d9bf91",  
-"    "\ "Renamed"   : "#51C9FC",  
-"    "\ "Untracked" : "#FCE77C",  
-"    "\ "Unmerged"  : "#FC51E6",  
-"    "\ "Dirty"     : "#FFBD61",  
-"    "\ "Clean"     : "#87939A",  
-"    "\ "Ignored"   : "#808080"  
-"    "\ }                        
+nmap <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeGitStatusWithFlags = 1
+    "\ "Staged"    : "#0ee375",  
+    "\ "Modified"  : "#d9bf91",  
+    "\ "Renamed"   : "#51C9FC",  
+    "\ "Untracked" : "#FCE77C",  
+    "\ "Unmerged"  : "#FC51E6",  
+    "\ "Dirty"     : "#FFBD61",  
+    "\ "Clean"     : "#87939A",  
+    "\ "Ignored"   : "#808080"  
+    "\ }                        
 
-"let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeIgnore = ['^node_modules$']
 
 " CTRL-P
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
