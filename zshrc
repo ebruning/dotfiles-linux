@@ -23,12 +23,17 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$HOME/.rbenv/bin:~/.local/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$PATH"
 
 alias vi=nvim
 alias cat=bat
 alias f=ranger
 alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
+alias mkdir="ptmkdir"
+alias touch="pttouch"
+alias cp="ptcp"
+alias rm="ptrm"
+alias pwd="ptpwd"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
@@ -37,3 +42,5 @@ eval "$(rbenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
