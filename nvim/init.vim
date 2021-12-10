@@ -78,9 +78,6 @@ let g:NERDTreeGitStatusWithFlags = 1
 
 let g:NERDTreeIgnore = ['^node_modules$']
 
-" CTRL-P
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
 " auto folds
 "let g:coc_global_extensions = [
 "  \ 'coc-snippets',
