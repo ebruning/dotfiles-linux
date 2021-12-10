@@ -44,8 +44,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-Plug 'christoomey/vim-tmux-navigator'
-
 call plug#end()
 
 " vim settinga
