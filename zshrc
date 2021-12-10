@@ -22,18 +22,16 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$HOME/.rbenv/bin:~/.local/bin:$PATH"
 
 alias vi=nvim
 alias cat=bat
 alias f=ranger
 alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-
-export PATH="$PATH:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
