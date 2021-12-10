@@ -7,23 +7,24 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-" Appearence {{{ "
+" Appearence
 Plug 'itchyny/lightline.vim'		" Status line
 Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons' " icons
+Plug 'ap/vim-css-color'
 
 " Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Side bars{{{
+" Side bars
 Plug 'scrooloose/nerdtree'		" NERD Tree
 Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
-"Plug 'mbbill/undotree'
-"Plug 'preservim/tagbar'
-" }}}
+
+" Autocomplete
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Completion as in vscode
 
-"JS {{{
+"JS
 Plug 'https://github.com/pangloss/vim-javascript.git'
 Plug 'posva/vim-vue'
 Plug 'prettier/vim-prettier'
@@ -33,22 +34,15 @@ Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescri
 Plug 'honza/vim-snippets'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-"Plug 'SirVer/ultisnips'
 Plug 'albanm/vuetify-vim'
-"}}}
 
-" Markdown {{{
+" Markdown 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-"}}}
 
-" GIT {{{
+" GIT
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-" }}}
-
-Plug 'ryanoasis/vim-devicons' " icons
-Plug 'ap/vim-css-color'
 
 Plug 'christoomey/vim-tmux-navigator'
 
