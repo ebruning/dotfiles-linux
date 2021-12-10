@@ -13,6 +13,7 @@ Plug 'morhetz/gruvbox'
 
 " Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Side bars{{{
 "Plug 'scrooloose/nerdtree'		" NERD Tree
@@ -56,7 +57,7 @@ call plug#end()
 " vim settinga
 colorscheme gruvbox
 
-set encoding=utf-8
+set encoding=UTF-8
 set number
 set background=dark
 set laststatus=2
