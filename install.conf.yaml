@@ -1,6 +1,7 @@
 - defaults:
     link:
       relink: true
+      force: true
 
 - clean: ['~']
 
@@ -13,9 +14,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/.config/alacritty:
-      force:true
-      path: alacritty
+    ~/.config/alacritty: alacritty
     ~/.config/nvim: nvim
     ~/.config/bat: bat
     ~/.config/ranger: ranger 
