@@ -24,6 +24,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$PATH"
+export EDITOR=nvim
 
 alias vi=nvim
 alias cat=bat
