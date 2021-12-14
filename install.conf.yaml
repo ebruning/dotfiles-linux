@@ -8,6 +8,7 @@
 - create:
     - ~/.tmux/plugins
     - ~/.ranger/plugins
+    - ~/.fonts
 
 - shell:
   - [sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing OhMyZsh]
