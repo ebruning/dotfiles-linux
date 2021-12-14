@@ -2,26 +2,17 @@
 
 PROJECT="$HOME/projects/dotfiles-linux/"
 
-# install ohmyzsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# install nvim, exa bat
 
-# system config files
+# virtual environments
+# pyenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
-ln -sf $PROJECT/zshrc $HOME/.zshrc
-ln -sf $PROJECT/gitconfig $HOME/.gitconfig
+# rbenv
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+mkdir -p "$(rbenv root)"/plugins
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-#nvim
-mkdir -p $HOME/.config/nvim
+# nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
-ln -sf $PROJECT/nvim/init.vim $HOME/.config/nvim/init.vim
-ln -sf $PROJECT/nvim/coc-settings.json $HOME/.config/nvim/coc-settings.json
-
-#bashtop
-#ln -sf $PROJECT/
-
-#alacritty
-ln -sf $PROJECT/alacritty $HOME/.config/alacritty
-
-# BAT
-mkdir -p $HOME/.config/bat
-ln -sf $PROJECT/bat/config $HOME/.config/bat/config
