@@ -22,7 +22,7 @@ Plug 'scrooloose/nerdtree'		" NERD Tree
 Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
 
 " Autocomplete
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Completion as in vscode
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 "JS
 Plug 'https://github.com/pangloss/vim-javascript.git'
