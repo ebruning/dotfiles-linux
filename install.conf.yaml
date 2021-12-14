@@ -24,6 +24,3 @@
     ~/.config/nvim/coc-settings.json: nvim/coc-settings.json
     ~/.config/bat: bat
     ~/.config/ranger: ranger 
-
-
-
