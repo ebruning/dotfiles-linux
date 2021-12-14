@@ -23,4 +23,4 @@
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.config/nvim/coc-settings.json: nvim/coc-settings.json
     ~/.config/bat: bat
-    ~/.config/ranger: ranger 
+    ~/.config/ranger/rc.conf: ranger/rc.conf 
