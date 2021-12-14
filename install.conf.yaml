@@ -23,4 +23,7 @@
     ~/.config/nvim/init.vim: config/nvim/init.vim
     ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
     ~/.config/bat: config/bat
+    ~/.config/Thunar: config/Thunar
     ~/.config/ranger/rc.conf: config/ranger/rc.conf 
+    ~/.config/xfce: config/xfce4
+    ~/.local/share/xfce4: share/xfce4
