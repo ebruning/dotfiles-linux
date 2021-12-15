@@ -96,7 +96,7 @@ super + m
 
 #urxvt
 super + Return
-    urxvt
+    alacritty
 
 #Xkill
 super + Escape
