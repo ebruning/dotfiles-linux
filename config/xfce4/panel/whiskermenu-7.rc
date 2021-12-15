@@ -1,5 +1,5 @@
 favorites=arcolinux-welcome-app.desktop,arcolinux-tweak-tool.desktop,thunar.desktop,xfce4-terminal.desktop,conkyzen.desktop
-recent=lightdm-gtk-greeter-settings.desktop,arcolinux-tweak-tool.desktop,deepin-font-manager.desktop,xfce-ui-settings.desktop,deepin-system-monitor.desktop,com.visualstudio.code.desktop,grub-customizer.desktop,Alacritty.desktop,thunar.desktop,firefox.desktop
+recent=xfce-settings-manager.desktop,xfce-wm-settings.desktop,xfce4-accessibility-settings.desktop,xfce-display-settings.desktop,deepin-font-manager.desktop,conkyzen.desktop,grub-customizer.desktop,xfce-wmtweaks-settings.desktop,xfce-backdrop-settings.desktop,xfce-ui-settings.desktop
 button-title=
 button-icon=start-here-arcolinux
 button-single-row=false

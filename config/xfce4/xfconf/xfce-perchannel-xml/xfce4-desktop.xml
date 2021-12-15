@@ -626,7 +626,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/arcolinux/rocket-7680x4320.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
@@ -648,7 +648,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/arcolinux/time-abstract.jpg"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
@@ -670,7 +670,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/arcolinux/koi-fishes-1920x1080.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>

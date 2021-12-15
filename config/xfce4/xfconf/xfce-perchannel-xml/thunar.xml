@@ -9,9 +9,14 @@
   <property name="last-window-height" type="int" value="731"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,142,50,50,535,50,50,75,63,188"/>
+  <property name="last-details-view-column-widths" type="string" value="50,189,50,50,247,50,50,98,63,481"/>
   <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_ISO"/>
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="misc-show-delete-action" type="bool" value="true"/>
   <property name="misc-full-path-in-title" type="bool" value="true"/>
+  <property name="misc-change-window-icon" type="bool" value="true"/>
+  <property name="misc-text-beside-icons" type="bool" value="false"/>
+  <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
+  <property name="shortcuts-icon-emblems" type="bool" value="true"/>
+  <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
 </channel>
