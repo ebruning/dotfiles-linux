@@ -502,7 +502,7 @@ interval = 5
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
 ;date = " %Y-%m-%d%"
 date = " %m/%d "
-date-alt = " %d-%m-%Y"
+date-alt = " %a %b %d %Y"
 time = %H:%M
 time-alt = %H:%M
 format-prefix = " "
