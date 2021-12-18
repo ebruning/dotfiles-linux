@@ -30,11 +30,11 @@ alias vi=nvim
 alias cat=bat
 alias f=ranger
 alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
-alias mkdir="ptmkdir"
-alias touch="pttouch"
-alias cp="ptcp"
-alias rm="ptrm"
-alias pwd="ptpwd"
+alias mkdir="ptMkdir.sh"
+alias touch="ptTouch.sh"
+alias cp="ptCp.sh"
+alias rm="ptRm.sh"
+alias pwd="ptPwd.sh"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
