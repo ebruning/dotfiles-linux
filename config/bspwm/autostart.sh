@@ -19,6 +19,7 @@ $HOME/.config/polybar/launch.sh &
 #change your keyboard if you need it
 #setxkbmap -layout be
 
+setxkbmap -option caps:ctrl_modifier &
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 if [ $keybLayout = "be" ]; then
@@ -36,7 +37,7 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
-conky -c $HOME/.config/bspwm/system-overview &
+#conky -c $HOME/.config/bspwm/system-overview &
 #run variety &
 #run nm-applet &
 #run pamac-tray &
