@@ -388,9 +388,10 @@ modules-right = filesystem
 [bar/mainbar-bspwm]
 monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
-width = 100%
+;width = 100%
+width = 90%
 height = 40
-;offset-x = 1%
+offset-x = 5%
 ;offset-y = 1%
 radius = 0.0
 fixed-center = true
@@ -417,8 +418,8 @@ border-size = 0
 ;border-bottom-size = 25
 border-color = #00000000
 
-padding-left = 0
-padding-right = 1
+padding-left = 5
+padding-right = 5
 
 module-margin-left = 3
 module-margin-right = 3
@@ -1778,7 +1779,8 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %Y-%m-%d%"
+;date = " %Y-%m-%d%"
+date = " %m/%d "
 date-alt = " %d-%m-%Y"
 time = %H:%M
 time-alt = %H:%M
