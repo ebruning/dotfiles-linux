@@ -9,6 +9,7 @@
     - ~/.tmux/plugins
     - ~/.config/ranger
     - ~/.config/ranger/plugins
+    - ~/.config/nvim
     - ~/.fonts
 
 - shell:
@@ -30,3 +31,4 @@
     ~/.config/ranger/rc.conf: config/ranger/rc.conf 
     ~/.config/sxhkd: config/sxhkd
     ~/.config/Thunar: config/Thunar
+    ~/.local/share/ptSh: config/ptSh
