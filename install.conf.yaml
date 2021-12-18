@@ -7,7 +7,8 @@
 
 - create:
     - ~/.tmux/plugins
-    - ~/.ranger/plugins
+    - ~/.config/ranger
+    - ~/.config/ranger/plugins
     - ~/.fonts
 
 - shell:
@@ -19,9 +20,13 @@
     ~/.tmux.conf: tmux.conf
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/.config/alacritty: alacritty
-    ~/.config/nvim/init.vim: nvim/init.vim
-    ~/.config/nvim/coc-settings.json: nvim/coc-settings.json
-    ~/.config/bat: bat
-    ~/.config/ranger: ranger 
-    ~/.config/ranger/rc.conf: ranger/rc.conf 
+
+    ~/.config/alacritty: config/alacritty
+    ~/.config/bat: config/bat
+    ~/.config/bspwn: config/bspwm
+    ~/.config/nvim/init.vim: config/nvim/init.vim
+    ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
+    ~/.config/polybar: config/polybar
+    ~/.config/ranger/rc.conf: config/ranger/rc.conf 
+    ~/.config/sxhkd: config/sxhkd
+    ~/.config/Thunar: config/Thunar
