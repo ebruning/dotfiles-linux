@@ -418,8 +418,8 @@ border-size = 0
 ;border-bottom-size = 25
 border-color = #00000000
 
-padding-left = 5
-padding-right = 5
+padding-left = 0
+padding-right = 2
 
 module-margin-left = 3
 module-margin-right = 3
@@ -434,8 +434,11 @@ font-3 = "Noto Sans Mono:size=14;0"
 ;font-2 = "Noto Sans:size=10;0"
 ;font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = bspwm xwindow
-modules-center = kernel
+;modules-left = bspwm xwindow
+;modules-center = kernel
+;modules-right = pavolume battery wireless-network date
+modules-left = bspwm 
+modules-center = xwindow
 modules-right = pavolume battery wireless-network date
 
 tray-detached = false
