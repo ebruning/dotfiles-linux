@@ -127,7 +127,8 @@ font-3 = "Noto Sans Mono:size=14;0"
 ;modules-right = pavolume battery wireless-network date
 modules-left = bspwm 
 modules-center = xwindow
-modules-right = pavolume battery wireless-network date
+;modules-right = pavolume battery wireless-network arch-updates aur-updates pamac-manager date
+modules-right = pavolume battery wireless-network pamac-manager date
 
 tray-detached = false
 tray-offset-x = 0
@@ -501,7 +502,8 @@ interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
 ;date = " %Y-%m-%d%"
-date = " %m/%d "
+;date = " %m/%d "
+date = " %a %b %d %Y"
 date-alt = " %a %b %d %Y"
 time = %H:%M
 time-alt = %H:%M
