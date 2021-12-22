@@ -7,11 +7,13 @@
 
 - create:
     - ~/.tmux/plugins
-    - ~/.ranger/plugins
+    - ~/.config/ranger
+    - ~/.config/ranger/plugins
+    - ~/.config/nvim
     - ~/.fonts
 
 - shell:
-  - [sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh --unattended:)", Installing OhMyZsh]
+  - [sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended", Installing OhMyZsh]
   - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, Installing TPM]
   - [git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons, Installing Ranger devicons]
 
@@ -19,13 +21,15 @@
     ~/.tmux.conf: tmux.conf
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/.config/alacritty: alacritty
-    ~/.config/nvim/init.vim: nvim/init.vim
-    ~/.config/nvim/coc-settings.json: nvim/coc-settings.json
-    ~/.config/bat: bat
     ~/.config/ranger: ranger 
     ~/.config/ranger/rc.conf: ranger/rc.conf 
-    ~/.config/bspwm: config/bspwn
+    ~/.config/alacritty: config/alacritty
+    ~/.config/bat: config/bat
+    ~/.config/bspwn: config/bspwm
+    ~/.config/nvim/init.vim: config/nvim/init.vim
+    ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
     ~/.config/polybar: config/polybar
+    ~/.config/ranger/rc.conf: config/ranger/rc.conf 
     ~/.config/sxhkd: config/sxhkd
     ~/.config/Thunar: config/Thunar
+    :x

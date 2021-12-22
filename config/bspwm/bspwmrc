@@ -16,3 +16,4 @@ bspc config gapless_monocle      true
 
 ## Autostart
 sh $HOME/.config/polybar/bspwm.sh
+#dunst &
