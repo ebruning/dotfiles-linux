@@ -25,3 +25,7 @@
     ~/.config/bat: bat
     ~/.config/ranger: ranger 
     ~/.config/ranger/rc.conf: ranger/rc.conf 
+    ~/.config/bspwm: config/bspwn
+    ~/.config/polybar: config/polybar
+    ~/.config/sxhkd: config/sxhkd
+    ~/.config/Thunar: config/Thunar
