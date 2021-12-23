@@ -1,27 +1,26 @@
 #!/usr/bin/env bash
 
-PROJECT="$HOME/projects/dotfiles-linux/"
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
-# install ohmyzsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+mkdir -p ~/.rbenv/plugins
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-# system config files
+~/.pyenv/bin/pyenv install 3.10.1
+~/.pyenv/bin/pyenv global 3.10.1
+pip install --upgrade pip
+pip install neovim ranger-fm
 
-ln -sf $PROJECT/zshrc $HOME/.zshrc
-ln -sf $PROJECT/gitconfig $HOME/.gitconfig
+NVM_DIR="$HOME/.nvm"
+source $NVM_DIR/nvm.sh 
 
-#nvim
-mkdir -p $HOME/.config/nvim
+nvm install --lts
+npm -g install diff-so-fancy yarn neovim
 
-ln -sf $PROJECT/nvim/init.vim $HOME/.config/nvim/init.vim
-ln -sf $PROJECT/nvim/coc-settings.json $HOME/.config/nvim/coc-settings.json
+~/.rbenv/bin/rbenv install 3.0.3
+~/.rbenv/bin/rbenv global 3.0.3
+eval "$(rbenv init - zsh)"
+gem install neovim 
 
-#bashtop
-#ln -sf $PROJECT/
-
-#alacritty
-ln -sf $PROJECT/alacritty $HOME/.config/alacritty
-
-# BAT
-mkdir -p $HOME/.config/bat
-ln -sf $PROJECT/bat/config $HOME/.config/bat/config
+#sudo pacman -Ss ueberzug neovim xclip exa
