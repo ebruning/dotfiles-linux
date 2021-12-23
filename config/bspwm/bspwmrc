@@ -16,4 +16,5 @@ bspc config gapless_monocle      true
 
 ## Autostart
 sh $HOME/.config/polybar/bspwm.sh
+setxkbmap -option caps:ctrl_modifier &
 #dunst &
