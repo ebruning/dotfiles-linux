@@ -32,4 +32,3 @@
     ~/.config/ranger/rc.conf: config/ranger/rc.conf 
     ~/.config/sxhkd: config/sxhkd
     ~/.config/Thunar: config/Thunar
-    :x
