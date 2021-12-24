@@ -231,7 +231,8 @@ reverse-scroll = true
 pin-workspaces = true
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
 ws-icon-default = ""
 
 
@@ -257,7 +258,7 @@ label-empty-padding = 2
 label-empty-background = ${colors.background}
 label-monocle = "  "
 label-monocle-foreground = ${colors.foreground}
-label-tiled = "  "
+;label-tiled = "  "
 label-tiled-foreground = ${colors.foreground}
 label-fullscreen = "  "
 label-fullscreen-foreground = ${colors.foreground}
