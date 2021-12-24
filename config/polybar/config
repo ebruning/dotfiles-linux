@@ -128,7 +128,7 @@ font-3 = "Noto Sans Mono:size=14;0"
 modules-left = bspwm 
 modules-center = xwindow
 ;modules-right = pavolume battery wireless-network arch-updates aur-updates pamac-manager date
-modules-right = pavolume battery wireless-network pamac-manager date
+modules-right = pavolume battery wireless-network pamac-manager date powermenu
 
 tray-detached = false
 tray-offset-x = 0
@@ -228,14 +228,13 @@ enable-click = true
 enable-scroll = false
 reverse-scroll = true
 pin-workspaces = true
-
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
-;ws-icon-5 = 6;
-;ws-icon-6 = 7;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
 ;ws-icon-7 = 8;
 ;ws-icon-8 = 9;
 ;ws-icon-9 = 10;
@@ -851,7 +850,23 @@ format-underline = #3EC13F
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+################################################################################
 
+[module/powermenu]
+    type = custom/menu
+    expand-left = true
+    format-spacing = 2
+    label-open = "   "
+    label-close = ""
+    label-separator = " "
+;    label-foreground = #f3f4f5
+;    label-background = #2F343F
+    format-foreground = ${colors.foreground}
+    format-background = ${colors.background}
+    menu-0-0 = ""
+    menu-0-0-exec = sudo reboot
+    menu-0-1 = "  "
+    menu-0-1-exec = sudo poweroff
 
 ################################################################################
 
