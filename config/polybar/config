@@ -16,6 +16,8 @@
 ;
 ;==========================================================
 
+include-file = ~/.config/polybar/modules.ini
+
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #222
@@ -27,7 +29,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/example]
+[bar/bspwm-bar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
@@ -51,13 +53,16 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm
+font-0 = "Noto Sans:size=12;0"
+font-1 = "FontAwesome:size=12;0"
+;font-1 = "Hack Nerd Font:size=12;2"
+font-2 = "Noto Sans:size=12;0"
+font-3 = "Noto Sans Mono:size=12;0"
+
+modules-left = 
 modules-center = xwindow
-modules-right = pulseaudio date2 
+modules-right = pulseaudio date 
 
 tray-position = right
 tray-padding = 2
@@ -76,19 +81,6 @@ wm-restack = bspwm
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-[module/xwindow]
-;https://github.com/jaagr/polybar/wiki/Module:-xwindow
-type = internal/xwindow
-
-; Available tokens:
-;   %title%
-; Default: %title%
-label = %title%
-label-maxlen = 50
-
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -268,49 +260,6 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/date]
-type = internal/date
-interval = 5
-
-date =
-date-alt = " %Y-%m-%d"
-
-time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
-
-label = %date% %time%
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
-
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
 [module/alsa]
 type = internal/alsa
 
@@ -361,7 +310,7 @@ ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
-							animation-charging-1 = 
+animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
@@ -419,34 +368,6 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
-
-[module/date2]
-type = internal/date
-
-; Seconds to sleep between updates
-interval = 1.0
-
-; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-;;date = %Y-%m-%d%
-
-; Optional time format
-time = " %I:%M %p"
-
-; if `date-alt` or `time-alt` is defined, clicking
-; the module will toggle between formats
-;;date-alt = %A, %d %B %Y
-time-alt = " %a, %d %b %Y"
-
-; Available tags:
-;   <label> (default)
-format = <label>
-
-; Available tokens:
-;   %date%
-;   %time%
-; Default: %date%
-label = %time%
 
 [settings]
 screenchange-reload = true
