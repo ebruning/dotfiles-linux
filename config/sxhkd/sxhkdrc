@@ -2,13 +2,13 @@
 # wm independent hotkeys
 #
 
+## EGB - My Specific settings
 # terminal emulator
 super + Return
 	alacritty
 
 # program launcher
 super + @space
-#	dmenu_run
 	rofi -modi drun -show drun 
 
 # make sxhkd reload its configuration files:
@@ -19,7 +19,6 @@ super + Escape
 # bspwm hotkeys
 #
 
-## EGB - My Specific settings
 # arcolinux-logout
 super + x
     	arcolinux-logout
@@ -27,7 +26,9 @@ super + x
 super + f
     	thunar
 
-# alternate between the tiled and monocle layout
+super + q
+	bspc node -{c,k}
+
 super + m
 	bspc desktop -l next
 ## EGB End
