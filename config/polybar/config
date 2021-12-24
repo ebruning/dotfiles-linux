@@ -61,7 +61,7 @@ font-3 = "Noto Sans Mono:size=12;0"
 
 modules-left = cpu filesystem memory
 modules-center = xwindow
-modules-right = pulseaudio date 
+modules-right = pamac-manager pulseaudio date 
 
 tray-position = right
 tray-padding = 2
