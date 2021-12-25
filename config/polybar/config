@@ -17,18 +17,7 @@
 ;==========================================================
 
 include-file = ~/.config/polybar/modules.ini
-;include-file = ~/.config/polybar/colors.ini
-
-[colors]
-;background = ${xrdb:color0:#222}
-;background = #222
-background = #161618
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+include-file = ~/.config/polybar/colors.ini
 
 [bar/bspwm-bar]
 ;monitor = ${env:MONITOR:HDMI-1}
