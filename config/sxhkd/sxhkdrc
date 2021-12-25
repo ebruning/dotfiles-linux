@@ -9,6 +9,9 @@ super + Return
 
 # program launcher
 super + @space
+	albert show 
+
+super + r
 	rofi -modi drun -show drun 
 
 # make sxhkd reload its configuration files:
@@ -31,6 +34,11 @@ super + q
 
 super + m
 	bspc desktop -l next
+
+super + shift + {Left,Down,Up,Right}
+	dir={west,south,north,east}; \
+	bspc node -s "$dir.local" --follow \
+	    || bspc node -m "$dir" --follow
 ## EGB End
 
 # quit/restart bspwm
