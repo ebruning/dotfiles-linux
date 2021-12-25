@@ -21,7 +21,8 @@ include-file = ~/.config/polybar/modules.ini
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+;background = #222
+background = #161618
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #555
