@@ -15,7 +15,7 @@ super + f
     	thunar
 
 super + l
-	betterlock
+	betterlockscreen -l dimblur
 
 super + m
 	bspc desktop -l next
