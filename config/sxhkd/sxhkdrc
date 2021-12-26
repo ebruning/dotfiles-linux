@@ -11,34 +11,36 @@ super + Return
 super + @space
 	albert show 
 
-super + r
-	rofi -modi drun -show drun 
-
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
-# arcolinux-logout
-super + x
-    	arcolinux-logout
-
 super + f
     	thunar
 
-super + q
-	bspc node -{c,k}
+super + l
+	betterlock
 
 super + m
 	bspc desktop -l next
 
+super + q
+	bspc node -{c,k}
+
+super + r
+	rofi -modi drun -show drun 
+
+super + x
+    	arcolinux-logout
+
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# windows
 super + {Left,Down,Up,Right}
 	dir={west,south,north,east}; \
 	bspc node -s "$dir.local" --follow \
 	    || bspc node -m "$dir" --follow
 
-# resize windows
 super + alt + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
 ## EGB End
 
 # quit/restart bspwm
