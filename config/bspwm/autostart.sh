@@ -22,16 +22,12 @@ $HOME/.config/polybar/launch.sh &
 setxkbmap -option caps:ctrl_modifier &
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
-if [ $keybLayout = "be" ]; then
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc-azerty &
-else
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
-fi
+sxhkd &
 
 feh --bg-fill /usr/share/backgrounds/arcolinux/time-abstract.jpg &
 #feh --randomize --bg-fill ~/Képek/*
 
-dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+#dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
 #conky -c $HOME/.config/bspwm/system-overview &
@@ -41,7 +37,8 @@ xsetroot -cursor_name left_ptr &
 run xfce4-power-manager &
 numlockx on &
 #blueberry-tray &
-picom --config $HOME/.config/bspwm/picom.conf &
+#picom --config $HOME/.config/bspwm/picom.conf &
+picom --experimental-backends --backend glx --xrender-sync-fence &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #run volumeicon &
