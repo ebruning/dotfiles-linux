@@ -118,7 +118,7 @@ font-1 = "Hack Nerd Font:size=14;2"
 font-2 = "Noto Sans:size=14;0"
 font-3 = "Noto Sans Mono:size=14;0"
 
-modules-left = bspwm 
+modules-left = bspwm
 modules-center = xwindow
 modules-right = pavolume battery wireless-network pamac-manager date powermenu
 
@@ -371,7 +371,7 @@ format-discharging-underline = #c7ae25
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
-format-full-prefix = "   "
+format-full-prefix = "    "
 format-full-prefix-foreground = #a3c725
 format-full-underline = #a3c725
 format-full-foreground = ${colors.foreground}
@@ -1210,3 +1210,5 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ###############################################################################
+
+; vim:ft=dosini
