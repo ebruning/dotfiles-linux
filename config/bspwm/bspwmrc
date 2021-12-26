@@ -17,7 +17,7 @@ bspc rule -a albert:Albert border=off
 
 ## Autostart
 sh $HOME/.config/polybar/bspwm.sh
-picom --experimental-backends --backend glx --xrender-sync-fence
+picom --experimental-backends --backend glx --xrender-sync-fence &
 ~/.fehbg &
 setxkbmap -option caps:ctrl_modifier &
 dunst &
