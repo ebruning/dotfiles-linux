@@ -20,7 +20,7 @@ $HOME/.config/polybar/launch.sh &
 #setxkbmap -layout be
 
 setxkbmap -option caps:ctrl_modifier &
-keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
+#keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 sxhkd &
 
