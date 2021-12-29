@@ -13,7 +13,7 @@ window:
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
   decorations: full
-background_opacity: .95
+background_opacity: .75
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -34,7 +34,7 @@ font:
   bold_italic:
     family: 'Hack Nerd Font'
     style: Bold Italic
-  size: 13.0
+  size: 10.0
 
   #offset:
   #  x: 0
