@@ -5,6 +5,7 @@
 [core]
 	excludesfile = /Users/ethan/.gitignore_global
 	editor = nvim
+
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
