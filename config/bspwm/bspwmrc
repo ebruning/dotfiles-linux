@@ -20,5 +20,5 @@ sh $HOME/.config/polybar/bspwm.sh
 picom --experimental-backends --backend glx --xrender-sync-fence &
 ~/.fehbg &
 setxkbmap -option caps:ctrl_modifier &
-dunst &
-albert &
+#dunst &
+#albert & removing until fixing focus
