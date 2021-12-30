@@ -18,6 +18,7 @@
   - [git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons, Installing Ranger devicons]
 
 - link:
+    ~/Pictures/backgrounds: backgrounds
     ~/.config/picom.conf: picom.conf
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
@@ -33,3 +34,4 @@
     ~/.config/sxhkd: config/sxhkd
     ~/.config/Thunar: config/Thunar
     ~/.config/dunst: config/dunst
+    ~/.config/rofi: config/rofi
