@@ -1,27 +1,11 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="/home/ethan/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="muse"
-
-plugins=()
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
+autoload -Uz compinit vcs_info && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list '' \
+  'm:{a-z\-}={A-Z\_}' \
+  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+  'r:|?=** m:{a-z\-}={A-Z\_}'
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$PATH"
 export EDITOR=nvim
@@ -44,4 +28,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# https://github.com/olivierverdier/zsh-git-prompt
+# https://www.tweaking4all.com/software/macosx-software/customize-zsh-prompt/
+#source ~/.local/bin/zshrc.sh
+#NEWLINE=$'\n'
+#PROMPT='%F{178}%f[%n@%m]${NEWLINE}%c $(git_super_status) %# '
+# Load version control information
+#autoload -Uz vcs_info
+precmd() { vcs_info }
 
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats ' %u %c  %b'
+ 
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+PROMPT='%n in %c${vcs_info_msg_0_} > '
