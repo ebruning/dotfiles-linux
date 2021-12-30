@@ -9,7 +9,7 @@ super + Return
 
 # program launcher
 super + @space
-	albert show 
+	rofi -modi drun -show drun # 	albert show removing albert until fixing focus
 
 super + f
     	thunar
@@ -27,7 +27,7 @@ super + r
 	rofi -modi drun -show drun 
 
 super + x
-    	arcolinux-logout
+     	~/.local/bin/powermenu.sh
 
 super + Escape
 	pkill -USR1 -x sxhkd
