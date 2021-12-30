@@ -26,10 +26,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$PATH"
 export EDITOR=nvim
 
-alias vi=nvim
-alias cat=bat
+[ -f /usr/bin/nvim ] && alias vi=nvim
+[ -f /usr/bin/exa ] && alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
+[ -f /usr/bin/bat ] && alias cat=bat
 alias f=ranger
-alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
 #alias mkdir="ptMkdir.sh"
 #alias touch="ptTouch.sh"
 #alias cp="ptCp.sh"
