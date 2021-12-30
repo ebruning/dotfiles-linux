@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Appearence
 Plug 'itchyny/lightline.vim'		" Status line
+Plug 'itchyny/vim-gitbranch'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons' " icons
 Plug 'ap/vim-css-color'
@@ -91,15 +92,19 @@ let g:NERDTreeIgnore = ['^node_modules$']
 "  \ 'coc-emoji',
 "  \ ]
 
-" Use <c-space> to trigger completion.
-"inoremap <silent><expr> <c-space> coc#refresh()
-
 " ctrl-space search
 nnoremap <c-space> :FZF<CR>
 
 " Lightline
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
       \ }
 
 " coc config
