@@ -1,4 +1,5 @@
-autoload -Uz compinit vcs_info && compinit
+autoload -U colors && colors
+autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' \
   'm:{a-z\-}={A-Z\_}' \
@@ -33,8 +34,7 @@ export NVM_DIR="$HOME/.nvm"
 NEWLINE=$'\n'
 #PROMPT='%F{178}%f[%n@%m]${NEWLINE}%c $(git_super_status) %# '
 # Load version control information
-#autoload -Uz vcs_info
-#
+autoload -Uz vcs_info
 precmd() { vcs_info }
 
 # Format the vcs_info_msg_0_ variable
