@@ -1,4 +1,3 @@
-# User configuration
 autoload -Uz compinit vcs_info && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' \
@@ -30,17 +29,13 @@ export NVM_DIR="$HOME/.nvm"
 
 # https://github.com/olivierverdier/zsh-git-prompt
 # https://www.tweaking4all.com/software/macosx-software/customize-zsh-prompt/
-#source ~/.local/bin/zshrc.sh
-#NEWLINE=$'\n'
-#PROMPT='%F{178}%f[%n@%m]${NEWLINE}%c $(git_super_status) %# '
-# Load version control information
-#autoload -Uz vcs_info
+# https://www.ditig.com/256-colors-cheat-sheet
 precmd() { vcs_info }
 
-# Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats ' %u %c  %b'
- 
-# Set up the prompt (with git branch name)
+zstyle ':vcs_info:*' stagedstr '%{%F{green}B%} %{%b%f%}'
+zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%} %{%b%f%}'
+zstyle ':vcs_info:git:*' formats '%{%F{214}%} %{%F{137}%}(%{%F{214}%b%B%}%c%u%{%F{137}%})'
+
 setopt PROMPT_SUBST
-PROMPT='%n in %c${vcs_info_msg_0_} > '
+PROMPT='%{%F{240}%}%c ${vcs_info_msg_0_}%f: '
