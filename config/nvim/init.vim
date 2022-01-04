@@ -28,14 +28,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 "JS
 Plug 'https://github.com/pangloss/vim-javascript.git'
 Plug 'posva/vim-vue'
-Plug 'prettier/vim-prettier'
+"Plug 'prettier/vim-prettier'
 Plug 'dense-analysis/ale' "ES-Lint
 Plug 'pangloss/vim-javascript'
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescript'],  'do': 'make install' }
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'albanm/vuetify-vim'
+"Plug 'rbgrouleff/bclose.vim'
+"Plug 'albanm/vuetify-vim'
 
 " Markdown 
 Plug 'godlygeek/tabular'
@@ -50,6 +50,7 @@ call plug#end()
 " vim settinga
 colorscheme gruvbox
 
+set number relativenumber
 set encoding=UTF-8
 set number
 set background=dark
