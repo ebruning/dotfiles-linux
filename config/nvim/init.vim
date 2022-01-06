@@ -8,8 +8,8 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " Appearence
-Plug 'itchyny/lightline.vim'		" Status line
-Plug 'itchyny/vim-gitbranch'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons' " icons
 Plug 'ap/vim-css-color'
@@ -45,8 +45,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-Plug 'ryanoasis/vim-devicons' " icons
-Plug 'ap/vim-css-color'
 call plug#end()
 
 " vim settinga
@@ -98,17 +96,21 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " ctrl-space search
 nnoremap <c-space> :FZF<CR>
 
+" Airline
+let g:airline#extensions#tabline#enabled = 0
+let g:airline_powerline_fonts = 1
+
 " Lightline
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'gruvbox',
+"      \ 'active': {
+"      \   'left': [ [ 'mode', 'paste' ],
+"      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"      \ },
+"      \ 'component_function': {
+"      \   'gitbranch': 'FugitiveHead'
+"      \ },
+"      \ }
 
 " coc config
 " ======
