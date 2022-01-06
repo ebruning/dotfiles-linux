@@ -47,8 +47,8 @@ precmd() { vcs_info }
 zstyle ':vcs_info:*' check-for-changes true
 #zstyle ':vcs_info:*' unstagedstr ' '
 #zstyle ':vcs_info:*' stagedstr ' '
-zstyle ':vcs_info:*' stagedstr '%{%F{green}B%} %{%b%f%}'
-zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%} %{%b%f%}'
+zstyle ':vcs_info:*' stagedstr '%{%F{green}B%} %{%b%f%}'
+zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%} %{%b%f%}'
 zstyle ':vcs_info:git:*' formats '%{%F{214}%} %{%F{214}%}(%{%F{137}%b%B%}%c%u%{%F{214}%})'
 
 # Set up the prompt (with git branch name)
