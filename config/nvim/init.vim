@@ -33,7 +33,7 @@ Plug 'dense-analysis/ale' "ES-Lint
 Plug 'pangloss/vim-javascript'
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescript'],  'do': 'make install' }
 "Plug 'honza/vim-snippets'
-Plug 'francoiscabrol/ranger.vim'
+"Plug 'francoiscabrol/ranger.vim'
 "Plug 'rbgrouleff/bclose.vim'
 "Plug 'albanm/vuetify-vim'
 
@@ -45,6 +45,8 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'ryanoasis/vim-devicons' " icons
+Plug 'ap/vim-css-color'
 call plug#end()
 
 " vim settinga
@@ -136,8 +138,11 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
 
 highlight GitGutterAdd    guifg=#009900 ctermfg=2
+"jlkjlkjk
+"jlkjlkjk
 highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+highlight link DiffAdded GitGutterAdd 
 
 let g:gitgutter_sign_added = ""
 let g:gitgutter_sign_modified = ""
