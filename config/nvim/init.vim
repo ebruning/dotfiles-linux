@@ -10,7 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Appearence
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'ryanoasis/vim-devicons' " icons
 Plug 'ap/vim-css-color'
 
@@ -48,7 +48,7 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " vim settinga
-colorscheme gruvbox
+colorscheme gruvbox-material
 
 set number relativenumber
 set encoding=UTF-8
@@ -64,6 +64,9 @@ set splitbelow
 set noshowmode  " Don't show mode since using status line
 set hidden
 set cmdheight=1
+
+" Markdown is calcurse
+autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown 
 
 " Nerd Tree
 nmap <C-n> :NERDTreeToggle<CR>
