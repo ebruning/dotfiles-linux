@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1
+bspc monitor -d 1 2 3 4 5
 
 bspc config border_width         0
 bspc config window_gap          20
@@ -11,14 +11,12 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a albert:Albert border=off
-
 #bspc rule -a Screenkey manage=off
 
 ## Autostart
 sh $HOME/.config/polybar/bspwm.sh
-picom --experimental-backends --backend glx --xrender-sync-fence &
+xbindkeys&
+#picom --experimental-backends --backend glx --xrender-sync-fence &
 ~/.fehbg &
 setxkbmap -option caps:ctrl_modifier &
 #dunst &
-#albert & removing until fixing focus

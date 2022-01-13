@@ -33,13 +33,19 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # windows
-super + {Left,Down,Up,Right}
-	dir={west,south,north,east}; \
-	bspc node -s "$dir.local" --follow \
-	    || bspc node -m "$dir" --follow
+# Used with multiple monitors
+#super + {Left,Down,Up,Right}
+#	dir={west,south,north,east}; \
+#	bspc node -s "$dir.local" --follow \
+#	    || bspc node -m "$dir" --follow
+#
+#super + alt + {Left,Down,Up,Right}
+#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-super + alt + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# focus or send to the given desktop
+#super + {_,shift + }{1-9,0}
+super + {_,control + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
 
 # quit/restart bspwm
 super + alt + {q,r}

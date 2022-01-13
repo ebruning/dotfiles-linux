@@ -9,5 +9,5 @@ if type "xrandr"; then
     MONITOR=$m polybar --reload bspwm-bar &
   done
 else
- polybar --reload bspwm &
+ polybar --reload bspwm-bar &
 fi

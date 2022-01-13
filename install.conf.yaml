@@ -26,7 +26,7 @@
     ~/.config/ranger/rc.conf: ranger/rc.conf 
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
-    ~/.config/bspwn: config/bspwm
+    ~/.config/bspwm: config/bspwm
     ~/.config/nvim/init.vim: config/nvim/init.vim
     ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
     ~/.config/polybar: config/polybar

@@ -21,11 +21,11 @@ include-file = ~/.config/polybar/colors.ini
 
 [bar/bspwm-bar]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 90%
-offset-x = 5%
+width = 100%
+offset-x = 0%
 height = 30
 radius = 10.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -36,8 +36,8 @@ line-color = #f00
 border-size = 4
 border-color = #00000000
 
-padding-left = 0
-padding-right = 2
+padding-left = 5
+padding-right = 5
 
 module-margin-left = 1
 module-margin-right = 2
@@ -48,9 +48,9 @@ font-1 = "Hack Nerd Font:size=16;2"
 font-2 = "Noto Sans:size=12;0"
 font-3 = "Noto Sans Mono:size=12;0"
 
-modules-left = cpu filesystem memory
-modules-center = xwindow
-modules-right = pamac-manager pulseaudio date 
+modules-left = xwindow
+modules-center = bspwm
+modules-right = wireless-network pulseaudio battery date 
 
 tray-position = right
 tray-padding = 2

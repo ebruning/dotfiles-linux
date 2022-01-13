@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if ! command -v wget &> /dev/null
+then
+    echo "wget could not be found"
+    exit
+fi
+
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
