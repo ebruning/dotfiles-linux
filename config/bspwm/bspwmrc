@@ -15,8 +15,14 @@ bspc config gapless_monocle      true
 
 ## Autostart
 sh $HOME/.config/polybar/bspwm.sh
+nm-applet&
 xbindkeys&
-#picom --experimental-backends --backend glx --xrender-sync-fence &
+picom --experimental-backends --backend glx --xrender-sync-fence &
 ~/.fehbg &
+dunst &
+
+# Redefine keys
 setxkbmap -option caps:ctrl_modifier &
-#dunst &
+# redefine page up/down on lenovo keyboard
+xmodmap -e 'keycode 112 = Left'
+xmodmap -e 'keycode 117 = Right'

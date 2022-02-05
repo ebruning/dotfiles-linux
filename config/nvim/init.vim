@@ -41,6 +41,9 @@ Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescri
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" Notes
+Plug 'vimwiki/vimwiki'
+
 " GIT
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -64,6 +67,12 @@ set splitbelow
 set noshowmode  " Don't show mode since using status line
 set hidden
 set cmdheight=1
+set fillchars+=eob:\ 
+filetype plugin on
+syntax on
+
+" set leader to space
+let mapleader = " "
 
 " Markdown is calcurse
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown 
