@@ -4,10 +4,7 @@ HISTFILE=~/.zsh_history     #Where to save history to disk
 setopt    appendhistory     #Append history to the history file (no overwriting)
 setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 
-
- lasjl
-
-
+source ~/Projects/dotfiles-linux/scripts/git.zsh
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
@@ -24,8 +21,6 @@ export EDITOR=nvim
 [ -f /usr/bin/exa ] && alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
 [ -f /usr/bin/bat ] && alias cat=bat
 alias f=ranger
-#alikjkjljlkjlm.sh"
-#alias pwd="ptPwd.sh"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
@@ -55,4 +50,11 @@ zstyle ':vcs_info:git:*' formats '%{%F{214}%} %{%F{214}%}(%{%F{137}%b%B%}%c%u
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 #PROMPT='(%m)${NEWLINE}%c ${vcs_info_msg_0_} > '
-PROMPT='%{%F{137}%}%c ${vcs_info_msg_0_}%f: '
+#PROMPT='%{%F{137}%}%c ${vcs_info_msg_0_}%f> '
+
+PROMPT='[%{$fg_bold[white]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)%{$reset_color%}]$ '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg_bold[green]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[yellow]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%}"

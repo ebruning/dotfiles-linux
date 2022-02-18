@@ -26,7 +26,8 @@ case $chosen in
 	systemctl suspend
         ;;
     $log_out)
-        pkill xinit
+	# Change to current WM
+        pkill bspwm
         ;;
 esac
 
