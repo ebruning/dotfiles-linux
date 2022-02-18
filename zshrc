@@ -4,6 +4,10 @@ HISTFILE=~/.zsh_history     #Where to save history to disk
 setopt    appendhistory     #Append history to the history file (no overwriting)
 setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 
+
+ lasjl
+
+
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
@@ -20,10 +24,7 @@ export EDITOR=nvim
 [ -f /usr/bin/exa ] && alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
 [ -f /usr/bin/bat ] && alias cat=bat
 alias f=ranger
-#alias mkdir="ptMkdir.sh"
-#alias touch="ptTouch.sh"
-#alias cp="ptCp.sh"
-#alias rm="ptRm.sh"
+#alikjkjljlkjlm.sh"
 #alias pwd="ptPwd.sh"
 
 eval "$(pyenv init --path)"
