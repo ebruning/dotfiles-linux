@@ -4,10 +4,7 @@
   "suggest.removeDuplicateItems": true,
   "codeLens.enable": true,
   "coc.preferences.jumpCommand": "drop",
-  "coc.preferences.rootPatterns": [
-    ".git",
-    ".vscode"
-  ],
+  "coc.preferences.rootPatterns": [".git", ".vscode"],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
