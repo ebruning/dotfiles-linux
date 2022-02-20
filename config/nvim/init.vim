@@ -1,3 +1,10 @@
+"install plug-vim
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.config/nvim/plugged')
 
 " Status line
@@ -80,7 +87,9 @@ let g:nvim_tree_icons = {
 
 " call lua plugins
 lua << END
-require("plugins")
+require("config/lualine-config")
+require("config/toggleterm")
+require'nvim-tree'.setup()
 END
 
 " set leader to space
@@ -102,6 +111,6 @@ nmap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 
 " Load COC settings
-source ~/.config/nvim/config/coc-settings.vim
+" source ~/.config/nvim/config/coc-settings.vim
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
