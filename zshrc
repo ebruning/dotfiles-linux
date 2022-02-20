@@ -23,7 +23,6 @@ export EDITOR=nvim
 alias f=ranger
 
 eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
