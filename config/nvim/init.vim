@@ -87,8 +87,9 @@ let g:nvim_tree_icons = {
 
 " call lua plugins
 lua << END
-require("config/lualine-config")
-require("config/toggleterm")
+--require("config")
+require("lualine-config")
+require("toggleterm-config")
 require'nvim-tree'.setup()
 END
 
