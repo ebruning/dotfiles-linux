@@ -37,3 +37,5 @@
 	markEmptyLines = false
 	rulerWidth =
   useUnicodeRuler = false
+[init]
+	defaultBranch = main
