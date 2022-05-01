@@ -5,7 +5,6 @@ setopt    appendhistory     #Append history to the history file (no overwriting)
 setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 
 source ~/Projects/dotfiles-linux/scripts/git.zsh
-source ~/Projects/dotfiles-linux/scripts/colors
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
