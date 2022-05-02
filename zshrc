@@ -24,79 +24,17 @@ export EDITOR=nvim
 alias f=ranger
 alias pacman_clean='sudo pacman -Rns $(pacman -Qtdq)'
 
-eval "$(pyenv init --path)"
-eval "$(rbenv init -)"
+[ -f $HOME/.pyenv/bin/pyenv ] && eval "$(pyenv init --path)"
+[ -f $HOME/.rbenv/bin/rbenv ] && eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# https://github.com/olivierverdier/zsh-git-prompt
-# https://www.tweaking4all.com/software/macosx-software/customize-zsh-prompt/
-#source ~/.local/bin/zshrc.sh
-NEWLINE=$'\n'
-#PROMPT='%F{178}%f[%n@%m]${NEWLINE}%c $(git_super_status) %# '
-# Load version control information
-autoload -Uz vcs_info
+# Set prompt
 precmd() { vcs_info }
 
-# old prompt
-# # Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:*' check-for-changes true
-# #zstyle ':vcs_info:*' unstagedstr ' '
-# #zstyle ':vcs_info:*' stagedstr ' '
-# zstyle ':vcs_info:*' stagedstr '%{%F{green}B%} %{%b%f%}'
-# zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%} %{%b%f%}'
-# zstyle ':vcs_info:git:*' formats '%{%F{214}%} %{%F{214}%}(%{%F{137}%b%B%}%c%u%{%F{214}%})'
-#
-# # Set up the prompt (with git branch name)
-setopt PROMPT_SUBST
-# #PROMPT='(%m)${NEWLINE}%c ${vcs_info_msg_0_} > '
-# #PROMPT='%{%F{137}%}%c ${vcs_info_msg_0_}%f> '
 NT_PROMPT_SYMBOL=❱
-# # PROMPT='[%{$fg_bold[white]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)%{$reset_color%}]$ '
-#
-# ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg_bold[green]%}"
-# ZSH_THEME_GIT_PROMPT_SUFFIX=")"
-# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[yellow]%}✗%{$reset_color%}"
-# ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%}"
-#
-# end old prompt
-
-# new maybe kolo
-# zstyle ':vcs_info:*' stagedstr '%F{green}●'
-# zstyle ':vcs_info:*' unstagedstr '%F{yellow}●'
-# zstyle ':vcs_info:*' check-for-changes true
-# zstyle ':vcs_info:svn:*' branchformat '%b'
-# zstyle ':vcs_info:svn:*' formats ' [%b%F{1}:%F{11}%i%c%u%B%F{green}]'
-# zstyle ':vcs_info:*' enable git svn
-#
-# theme_precmd () {
-#   if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-#     zstyle ':vcs_info:git:*' formats ' [%b%c%u%B%F{green}]'
-#   else
-#     zstyle ':vcs_info:git:*' formats ' [%b%c%u%B%F{red}●%F{green}]'
-#   fi
-#
-#   vcs_info
-# }
-#
-# setopt prompt_subst
-# PROMPT='%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %{$reset_color%}%% '
-#
-# autoload -U add-zsh-hook
-# add-zsh-hook precmd  theme_precmd
-# end maybe kolo
-#
-# prompt style and colors based on Steve Losh's Prose theme:
-# https://github.com/sjl/oh-my-zsh/blob/master/themes/prose.zsh-theme
-#
-# vcs_info modifications from Bart Trojanowski's zsh prompt:
-# http://www.jukie.net/bart/blog/pimping-out-zsh-prompt
-#
-# git untracked files modification from Brian Carper:
-# https://briancarper.net/blog/570/git-info-in-your-zsh-prompt
-
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 function virtualenv_info {
