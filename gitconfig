@@ -8,34 +8,28 @@
 [core]
 	excludesfile = /Users/ethan/.gitignore_global
 	editor = nvim
-    pager = diff-so-fancy | less --tabs=2 -RFXS --pattern '^(Date|added|deleted|modified): '
+  pager = delta
 
 [alias]
     lg = log --color --graph --pretty=format:'%C(magenta)[%h]%Creset -%C(yellow)%d%Creset %s %C(bold yellow)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 
 [color]
 	ui = true
-[color "diff-highlight"]
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-	oldNormal = red bold
-[color "diff"]
-	meta = 11 bold
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[diff-so-fancy]
-	changeHunkIndicators = false
-	stripLeadingSymbols = false
-	markEmptyLines = false
-	rulerWidth =
-  useUnicodeRuler = false
+
 [init]
 	defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
