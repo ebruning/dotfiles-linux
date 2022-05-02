@@ -11,7 +11,7 @@
   pager = delta
 
 [alias]
-    lg = log --color --graph --pretty=format:'%C(magenta)[%h]%Creset -%C(yellow)%d%Creset %s %C(bold yellow)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%C(magenta)[%h]%Creset -%C(yellow)%d%Creset %s %C(bold yellow)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
@@ -23,13 +23,15 @@
 	defaultBranch = main
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-    navigate = true  # use n and N to move between diff sections
+  navigate = true  # use n and N to move between diff sections
+  line-numbers = true
+	side-by-side = true
 
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
 
 [diff]
-    colorMoved = default
+  colorMoved = default
