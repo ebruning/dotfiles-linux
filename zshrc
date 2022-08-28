@@ -24,8 +24,8 @@ export EDITOR=nvim
 alias f=ranger
 alias pacman_clean='sudo pacman -Rns $(pacman -Qtdq)'
 
-[ -f $HOME/.pyenv/bin/pyenv ] && eval "$(pyenv init --path)"
-[ -f $HOME/.rbenv/bin/rbenv ] && eval "$(rbenv init -)"
+# [ -f command -v pyenv &> /dev/null ] && eval "$(pyenv init -)"
+# [ -f command -v rbenv &> /dev/null ] && eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
