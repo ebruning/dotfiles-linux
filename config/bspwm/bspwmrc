@@ -12,6 +12,9 @@ libinput-gestures-setup autostart start
 # Run Picom.
 picom --config $HOME/.config/picom/picom.conf &
 
+# polkit ui
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 
 bspc monitor -d 1 2 3 4 5
