@@ -1,13 +1,13 @@
 #! /bin/sh
 
+# setup monitors
+~/.screenlayout/triple.sh
+
 # Keybinding
 pgrep -x sxhkd >/dev/null || sxhkd &
 
 # Run notification daemon.
 dunst --config $HOME/.config/dunst/dunstrc &
-
-# gestures
-libinput-gestures-setup autostart start
 
 # Run Picom.
 picom --config $HOME/.config/picom/picom.conf &
@@ -42,7 +42,6 @@ picom &
 flameshot &
 nm-applet &
 pa-applet &
-xinput disable 11 # disable touch screen
 blueman-applet &
 
 # Redefine keys
