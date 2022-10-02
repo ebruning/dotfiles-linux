@@ -21,6 +21,7 @@ export EDITOR=nvim
 #[ -f /home/ethan/.local/bin/lvim ] && alias vi=lvim
 [ -f /usr/bin/exa ] && alias ls="exa -bl --git --icons --time-style long-iso --group-directories-first"
 [ -f /usr/bin/bat ] && alias cat=bat
+[ -f /usr/bin/duf ] && alias df=duf
 alias f=ranger
 alias pacman_clean='sudo pacman -Rns $(pacman -Qtdq)'
 
