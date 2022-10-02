@@ -46,6 +46,3 @@ blueman-applet &
 
 # Redefine keys
 setxkbmap -option caps:ctrl_modifier &
-# redefine page up/down on lenovo keyboard
-xmodmap -e 'keycode 112 = Left'
-xmodmap -e 'keycode 117 = Right'
